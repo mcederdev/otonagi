@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Privacy Policy · Otonagi</title>
   <meta name="description" content="Otonagi collects no personal data. Everything you enter stays on your iPhone.">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0b1215">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site">
     <div class="wrap">
-      <a class="brand" href="./">Otonagi <span>音凪</span></a>
+      <a class="brand" href="./">Otonagi<span lang="ja">音凪</span></a>
       <nav>
         <a href="privacy.html" aria-current="page">Privacy</a>
         <a href="terms.html">Terms</a>
@@ -20,9 +22,50 @@
     </div>
   </header>
 
-  <main>
-    <div class="wrap">
-      <h1>Privacy Policy</h1>
+  <div class="night banner">
+    <h1>Privacy Policy</h1>
+    <p class="kanji" lang="ja">守</p>
+    <svg class="scene" viewBox="250 110 700 180" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="bw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2a31"/><stop offset="1" stop-color="#0b1215"/>
+    </linearGradient>
+    <linearGradient id="bf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="bm"><rect x="0" y="220" width="1200" height="140" fill="url(#bf)"/></mask>
+  </defs>
+  <path d="M0 214 C 140 200 220 206 320 212 C 380 204 420 208 470 214 L 0 220 Z M 760 216 C 860 196 960 204 1040 210 C 1100 204 1160 206 1200 210 L 1200 220 L 760 220 Z" fill="#111b20"/>
+  <ellipse class="glow" cx="560" cy="210" rx="300" ry="40"/>
+  <rect x="0" y="220" width="1200" height="140" fill="url(#bw)"/>
+  <g id="bs" class="sil">
+    <path d="M436 136 Q 525 146 614 136 L 616 128 Q 525 138 434 128 Z"/>
+    <rect x="446" y="143" width="158" height="7"/>
+    <rect x="452" y="164" width="146" height="6"/>
+    <rect x="520" y="150" width="10" height="14"/>
+    <path d="M466 150 L 477 150 L 479 220 L 464 220 Z"/>
+    <path d="M573 150 L 584 150 L 586 220 L 571 220 Z"/>
+    <path d="M652 194 L 676 178 L 776 178 L 800 194 Z"/>
+    <rect x="668" y="194" width="116" height="26"/>
+    <rect x="640" y="218" width="172" height="3"/>
+    <rect x="380" y="219" width="420" height="2"/>
+  </g>
+  <g mask="url(#bm)">
+    <use href="#bs" class="refl" transform="translate(0 441) scale(1 -1)"/>
+  </g>
+  <g class="shimmer">
+    <line x1="430" y1="232" x2="620" y2="232"/><line x1="460" y1="244" x2="600" y2="244"/>
+    <line x1="660" y1="238" x2="800" y2="238"/><line x1="480" y1="258" x2="580" y2="258"/>
+    <line x1="690" y1="252" x2="770" y2="252"/>
+  </g>
+  <g class="ripples">
+    <ellipse cx="525" cy="290" rx="120" ry="12"/><ellipse cx="525" cy="290" rx="120" ry="12"/><ellipse cx="525" cy="290" rx="120" ry="12"/>
+  </g>
+</svg>
+  </div>
+
+  <main class="doc">
+    <div class="wrap narrow">
       <p class="updated">Last updated: <span class="todo">[DATE OF PUBLISHING]</span></p>
 
       <div class="summary">
@@ -74,7 +117,9 @@
 
   <footer class="site">
     <div class="wrap">
-      <p>© 2026 <span class="todo">[LEGAL NAME]</span> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></p>
+      <a class="brand" href="./">Otonagi</a>
+      <p><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></p>
+      <p class="fine">© 2026 <span class="todo">[LEGAL NAME]</span>. iPhone is a trademark of Apple Inc. App Store is a service mark of Apple Inc.</p>
     </div>
   </footer>
 </body>

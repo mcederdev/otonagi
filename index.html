@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Otonagi · calm Japanese music for iPhone</title>
   <meta name="description" content="Otonagi plays gentle, ever-changing Japanese instrument music with nature sounds. No account, no tracking. For iPhone.">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0b1215">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site">
     <div class="wrap">
-      <a class="brand" href="./">Otonagi <span>音凪</span></a>
+      <a class="brand" href="./">Otonagi<span lang="ja">音凪</span></a>
       <nav>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
@@ -20,41 +22,182 @@
     </div>
   </header>
 
+  <div class="night hero">
+    <div class="hero-text">
+      <h1>Otonagi</h1>
+      <p class="tagline">The sound of a still sea</p>
+      <p class="kanji" lang="ja">音凪</p>
+      <span class="pill">Coming soon to the App Store</span>
+    </div>
+    <svg class="scene" viewBox="0 70 1200 290" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="hw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2a31"/><stop offset="1" stop-color="#0b1215"/>
+    </linearGradient>
+    <linearGradient id="hf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="hm"><rect x="0" y="220" width="1200" height="140" fill="url(#hf)"/></mask>
+  </defs>
+  <path d="M0 214 C 140 200 220 206 320 212 C 380 204 420 208 470 214 L 0 220 Z M 760 216 C 860 196 960 204 1040 210 C 1100 204 1160 206 1200 210 L 1200 220 L 760 220 Z" fill="#111b20"/>
+  <ellipse class="glow" cx="560" cy="210" rx="300" ry="40"/>
+  <rect x="0" y="220" width="1200" height="140" fill="url(#hw)"/>
+  <g id="hs" class="sil">
+    <path d="M436 136 Q 525 146 614 136 L 616 128 Q 525 138 434 128 Z"/>
+    <rect x="446" y="143" width="158" height="7"/>
+    <rect x="452" y="164" width="146" height="6"/>
+    <rect x="520" y="150" width="10" height="14"/>
+    <path d="M466 150 L 477 150 L 479 220 L 464 220 Z"/>
+    <path d="M573 150 L 584 150 L 586 220 L 571 220 Z"/>
+    <path d="M652 194 L 676 178 L 776 178 L 800 194 Z"/>
+    <rect x="668" y="194" width="116" height="26"/>
+    <rect x="640" y="218" width="172" height="3"/>
+    <rect x="380" y="219" width="420" height="2"/>
+  </g>
+  <g mask="url(#hm)">
+    <use href="#hs" class="refl" transform="translate(0 441) scale(1 -1)"/>
+  </g>
+  <g class="shimmer">
+    <line x1="430" y1="232" x2="620" y2="232"/><line x1="460" y1="244" x2="600" y2="244"/>
+    <line x1="660" y1="238" x2="800" y2="238"/><line x1="480" y1="258" x2="580" y2="258"/>
+    <line x1="690" y1="252" x2="770" y2="252"/>
+  </g>
+  <g class="ripples">
+    <ellipse cx="525" cy="290" rx="120" ry="12"/><ellipse cx="525" cy="290" rx="120" ry="12"/><ellipse cx="525" cy="290" rx="120" ry="12"/>
+  </g>
+</svg>
+  </div>
+
   <main>
-    <div class="wrap">
-      <section class="hero">
-        <p class="kanji" lang="ja">音凪</p>
-        <h1>Otonagi</h1>
-        <p class="tagline">Sound, and a calm sea.</p>
-      </section>
+    <section class="block">
+      <div class="wrap">
+        <svg class="enso" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M44 9 A 23 23 0 1 0 52 24"/>
+        </svg>
+        <p class="lead">Open Otonagi and music is already playing. Soft koto, shakuhachi and singing bowls that never play the same way twice, composed for you as they play, with rain, waves or a quiet fire beneath.</p>
+      </div>
+    </section>
 
-      <svg class="ripple" viewBox="0 0 220 60" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
-        <ellipse cx="110" cy="30" rx="18" ry="5" opacity="0.9"/>
-        <ellipse cx="110" cy="30" rx="48" ry="13" opacity="0.55"/>
-        <ellipse cx="110" cy="30" rx="80" ry="21" opacity="0.3"/>
-        <ellipse cx="110" cy="30" rx="108" ry="28" opacity="0.15"/>
-      </svg>
+    <section class="block alt">
+      <div class="wrap">
+        <p class="eyebrow">Moods</p>
+        <h2>A place for every hour</h2>
+        <p class="lead">Each mood has its own instruments, pace and light. Swipe to drift from one to the next.</p>
+        <div class="moods">
+          <figure class="mood"><img src="images/mood-nagi.jpg" alt="Nagi mood: calm blue sea with soft wave lines" loading="lazy" width="325" height="477"></figure>
+          <figure class="mood"><img src="images/mood-ame.jpg" alt="Ame mood: grey green with raindrop ripples" loading="lazy" width="325" height="477"></figure>
+          <figure class="mood"><img src="images/mood-tera.jpg" alt="Tera mood: warm temple light" loading="lazy" width="325" height="477"></figure>
+          <figure class="mood"><img src="images/mood-mori.jpg" alt="Mori mood: forest green with falling leaves" loading="lazy" width="325" height="477"></figure>
+          <figure class="mood"><img src="images/mood-umi.jpg" alt="Umi mood: open ocean teal" loading="lazy" width="325" height="477"></figure>
+          <figure class="mood"><img src="images/mood-yuki.jpg" alt="Yuki mood: lilac sky with falling snow" loading="lazy" width="325" height="477"></figure>
+        </div>
+        <p class="moods-note">And Takibi, a crackling fire for long evenings.</p>
+      </div>
+    </section>
 
-      <p>Otonagi is a quiet place on your iPhone. Open it and music is already playing: soft koto, shakuhachi and bells that never repeat the same way twice, with rain, waves or a crackling fire beneath.</p>
+    <section class="block">
+      <div class="wrap">
+        <p class="eyebrow">Inside</p>
+        <h2>Quiet by design</h2>
+        <div class="features">
+          <div class="feature"><span class="glyph" lang="ja">音</span><h3>Music that never repeats</h3><p>Japanese instruments arranged live on your iPhone, in koto, shakuhachi, piano, bowls or pads.</p></div>
+          <div class="feature"><span class="glyph" lang="ja">雨</span><h3>Nature beneath</h3><p>Mix rain, waves, wind, birds, stream and fire under the music, or let the time of day choose.</p></div>
+          <div class="feature"><span class="glyph" lang="ja">息</span><h3>Breathe</h3><p>A short breathing exercise, guided by gentle haptics and a soft heartbeat.</p></div>
+          <div class="feature"><span class="glyph" lang="ja">言</span><h3>Today's word</h3><p>One Japanese word each day to sit with, and an optional "How are you today?" check-in.</p></div>
+          <div class="feature"><span class="glyph" lang="ja">波</span><h3>Touch the water</h3><p>Tap the screen and a ripple spreads, with a single note that fits the music.</p></div>
+          <div class="feature"><span class="glyph" lang="ja">守</span><h3>Nothing leaves your phone</h3><p>No account, no ads, no tracking. Your name and check-ins stay on your device.</p></div>
+        </div>
+      </div>
+    </section>
 
-      <ul class="features">
-        <li><strong>Moods</strong>Nagi, Ame, Tera, Mori, Umi, Yuki and Takibi. Each has its own instruments, pace and colour.</li>
-        <li><strong>Nature sounds</strong>Mix rain, waves, forest, snow and fire under the music.</li>
-        <li><strong>Breathe</strong>A short breathing exercise guided by gentle haptics.</li>
-        <li><strong>Today's word</strong>One Japanese word each day to sit with, and an optional "How are you today?" check-in.</li>
-        <li><strong>Nothing leaves your phone</strong>No account, no ads, no tracking. Your name and check-ins stay on your device.</li>
-      </ul>
+    <section class="block alt">
+      <div class="wrap">
+        <p class="eyebrow">A closer look</p>
+        <h2>Simple, and yours to shape</h2>
+        <div class="phones">
+          <figure class="phone"><div class="frame"><img src="images/shot-info.jpg" alt="The story behind the Nagi mood, shown in a soft card" loading="lazy" width="600" height="1235"></div><figcaption>The story of each mood<span>What the name means, and what to expect.</span></figcaption></figure>
+          <figure class="phone"><div class="frame"><img src="images/shot-mixer.jpg" alt="Choosing a style and mixing nature sounds with sliders" loading="lazy" width="600" height="1235"></div><figcaption>Your own mix<span>Pick an instrument, then blend in nature.</span></figcaption></figure>
+          <figure class="phone"><div class="frame"><img src="images/shot-menu.jpg" alt="The folding menu with moods, style, nature sounds and sleep timer" loading="lazy" width="600" height="1235"></div><figcaption>Everything in one fold<span>Moods, sounds, time of day and sleep timer.</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
 
-      <p class="muted">Otonagi is free to try, with Nagi and Ame included. Otonagi Plus opens every mood, style and sound for $24.99 a year or $49.99 once.</p>
+    <section class="block">
+      <div class="wrap">
+        <p class="eyebrow">Plans</p>
+        <h2>Free to begin</h2>
+        <div class="plans">
+          <div class="plan">
+            <h3>Otonagi</h3>
+            <p class="price">Free</p>
+            <ul>
+              <li>Nagi and Ame, one style each</li>
+              <li>Rain and waves</li>
+            </ul>
+          </div>
+          <div class="plan plus">
+            <h3>Otonagi Plus</h3>
+            <p class="price">$24.99 a year, or $49.99 once</p>
+            <ul>
+              <li>Every mood and every style</li>
+              <li>The full nature mixer</li>
+              <li>Time-of-day mode</li>
+            </ul>
+          </div>
+        </div>
+        <p class="center muted" style="font-size:14px;margin-top:22px">Purchases go through Apple. See the <a href="terms.html">Terms of Use</a>.</p>
+      </div>
+    </section>
 
-      <p class="cta"><span class="badge">Coming soon to the App Store</span></p>
+    <div class="night closing">
+      <p>Let the water settle.</p>
+      <p class="muted">Otonagi for iPhone, iOS 17 and later.</p>
+      <svg class="scene" viewBox="0 70 1200 290" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="cw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2a31"/><stop offset="1" stop-color="#0b1215"/>
+    </linearGradient>
+    <linearGradient id="cf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="cm"><rect x="0" y="220" width="1200" height="140" fill="url(#cf)"/></mask>
+  </defs>
+  <path d="M0 214 C 140 200 220 206 320 212 C 380 204 420 208 470 214 L 0 220 Z M 760 216 C 860 196 960 204 1040 210 C 1100 204 1160 206 1200 210 L 1200 220 L 760 220 Z" fill="#111b20"/>
+  <ellipse class="glow" cx="560" cy="210" rx="300" ry="40"/>
+  <rect x="0" y="220" width="1200" height="140" fill="url(#cw)"/>
+  <g id="cs" class="sil">
+    <path d="M436 136 Q 525 146 614 136 L 616 128 Q 525 138 434 128 Z"/>
+    <rect x="446" y="143" width="158" height="7"/>
+    <rect x="452" y="164" width="146" height="6"/>
+    <rect x="520" y="150" width="10" height="14"/>
+    <path d="M466 150 L 477 150 L 479 220 L 464 220 Z"/>
+    <path d="M573 150 L 584 150 L 586 220 L 571 220 Z"/>
+    <path d="M652 194 L 676 178 L 776 178 L 800 194 Z"/>
+    <rect x="668" y="194" width="116" height="26"/>
+    <rect x="640" y="218" width="172" height="3"/>
+    <rect x="380" y="219" width="420" height="2"/>
+  </g>
+  <g mask="url(#cm)">
+    <use href="#cs" class="refl" transform="translate(0 441) scale(1 -1)"/>
+  </g>
+  <g class="shimmer">
+    <line x1="430" y1="232" x2="620" y2="232"/><line x1="460" y1="244" x2="600" y2="244"/>
+    <line x1="660" y1="238" x2="800" y2="238"/><line x1="480" y1="258" x2="580" y2="258"/>
+    <line x1="690" y1="252" x2="770" y2="252"/>
+  </g>
+  <g class="ripples">
+    <ellipse cx="525" cy="290" rx="120" ry="12"/><ellipse cx="525" cy="290" rx="120" ry="12"/><ellipse cx="525" cy="290" rx="120" ry="12"/>
+  </g>
+</svg>
     </div>
   </main>
 
+
   <footer class="site">
     <div class="wrap">
-      <p>© 2026 <span class="todo">[LEGAL NAME]</span> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></p>
-      <p>iPhone is a trademark of Apple Inc. App Store is a service mark of Apple Inc.</p>
+      <a class="brand" href="./">Otonagi</a>
+      <p><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></p>
+      <p class="fine">© 2026 <span class="todo">[LEGAL NAME]</span>. iPhone is a trademark of Apple Inc. App Store is a service mark of Apple Inc.</p>
     </div>
   </footer>
 </body>

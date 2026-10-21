@@ -1,0 +1,272 @@
+/* Otonagi: still water at dusk, ink and paper.
+   System fonts only and no external loads, so the site itself tracks no one. */
+:root {
+  --paper: #f3f0e8;
+  --paper-2: #ebe6da;
+  --card: #fbf9f4;
+  --ink: #232d2f;
+  --ink-soft: #5f6b6a;
+  --line: #d8d1c2;
+  --water: #4c7676;
+  --accent: #b0533b; /* torii red, used sparingly */
+  --todo: #f2e0a0;
+  --night-1: #0b1215;
+  --night-2: #16222a;
+  --night-3: #2a3c45;
+  --moon: #e9e4d6;
+  --serif: "Hiragino Mincho ProN", "Yu Mincho", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Segoe UI", Roboto, sans-serif;
+  --radius: 22px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #10171a;
+    --paper-2: #141d21;
+    --card: #182227;
+    --ink: #e7e2d6;
+    --ink-soft: #9ba7a5;
+    --line: #26323a;
+    --water: #8db7b3;
+    --accent: #d47a62;
+    --todo: #5b4a1b;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.75 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--water); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--accent); }
+
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.narrow { max-width: 680px; }
+
+/* ---------- Header ---------- */
+header.site {
+  position: absolute; inset: 0 0 auto 0; z-index: 5;
+  color: var(--moon);
+}
+header.site .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 6px 20px; padding-top: 20px; padding-bottom: 20px;
+}
+.brand {
+  font-family: var(--serif); font-size: 20px; letter-spacing: 0.22em;
+  color: inherit; text-decoration: none;
+}
+.brand span { opacity: 0.55; font-size: 14px; letter-spacing: 0.1em; margin-left: 8px; }
+nav a {
+  color: inherit; opacity: 0.72; text-decoration: none; font-size: 14px;
+  letter-spacing: 0.12em; text-transform: uppercase; margin-left: 22px;
+}
+nav a:first-child { margin-left: 0; }
+nav a:hover { opacity: 1; color: inherit; }
+nav a[aria-current="page"] { opacity: 1; border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+
+/* ---------- Night scenes (hero and page banners) ---------- */
+.night {
+  position: relative; overflow: hidden; color: var(--moon);
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 62%, var(--night-3) 0%, transparent 70%),
+    linear-gradient(180deg, var(--night-1) 0%, var(--night-2) 58%, #0e171b 100%);
+}
+.hero { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
+.hero-text {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 120px 24px 24px;
+}
+.hero h1 {
+  font-family: var(--serif); font-weight: 400; margin: 0;
+  font-size: clamp(46px, 11vw, 88px); letter-spacing: 0.28em; margin-right: -0.28em;
+  line-height: 1.1;
+}
+.hero .tagline {
+  font-family: var(--serif); font-style: italic; opacity: 0.7;
+  font-size: clamp(17px, 3.6vw, 21px); margin: 14px 0 0;
+}
+.hero .kanji {
+  font-family: var(--serif); font-size: 15px; letter-spacing: 0.6em; margin-right: -0.6em;
+  opacity: 0.5; margin-top: 26px;
+}
+.pill {
+  display: inline-block; margin-top: 40px; padding: 11px 26px;
+  border: 1px solid rgba(233, 228, 214, 0.35); border-radius: 999px;
+  color: var(--moon); text-decoration: none; font-size: 14px; letter-spacing: 0.14em;
+  text-transform: uppercase; background: rgba(233, 228, 214, 0.04);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.scene { display: block; width: 100%; height: auto; }
+.scene .sil { fill: #070c0e; }
+.scene .refl { fill: #070c0e; opacity: 0.5; }
+.scene .shimmer { stroke: #2b3c44; stroke-width: 2; }
+.scene .glow { fill: #c9d6d6; opacity: 0.04; }
+
+/* Slow ripples drifting on the water */
+.ripples ellipse { fill: none; stroke: #9fb6b6; stroke-width: 1; opacity: 0; transform-origin: center; transform-box: fill-box; animation: ripple 9s ease-out infinite; }
+.ripples ellipse:nth-child(2) { animation-delay: 3s; }
+.ripples ellipse:nth-child(3) { animation-delay: 6s; }
+@keyframes ripple {
+  0% { transform: scale(0.2); opacity: 0; }
+  15% { opacity: 0.45; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ripples ellipse { animation: none; opacity: 0.2; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Sections ---------- */
+section.block { padding: 96px 0; }
+.eyebrow {
+  font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-soft);
+  margin: 0 0 14px; text-align: center;
+}
+h2 {
+  font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.25; margin: 0 0 18px; text-align: center; letter-spacing: 0.02em;
+}
+.lead {
+  font-family: var(--serif); font-size: clamp(19px, 3.4vw, 23px); line-height: 1.7;
+  text-align: center; color: var(--ink); max-width: 640px; margin: 0 auto;
+}
+.center { text-align: center; }
+.muted { color: var(--ink-soft); }
+
+.enso { display: block; width: 54px; height: 54px; margin: 0 auto 30px; color: var(--ink-soft); opacity: 0.6; }
+
+/* Mood strip */
+.moods {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-top: 48px;
+}
+.mood { margin: 0; text-align: center; }
+.mood img {
+  width: 100%; aspect-ratio: 325 / 477; object-fit: cover; border-radius: 16px;
+  box-shadow: 0 18px 40px -22px rgba(10, 20, 24, 0.55);
+}
+.mood figcaption { margin-top: 12px; font-family: var(--serif); letter-spacing: 0.2em; font-size: 14px; }
+.mood figcaption span { display: block; letter-spacing: 0.02em; font-style: italic; color: var(--ink-soft); font-size: 13px; }
+.moods-note { text-align: center; color: var(--ink-soft); font-size: 15px; margin-top: 28px; }
+
+/* Features */
+.alt { background: var(--paper-2); }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px; }
+.feature {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 30px 26px 26px;
+}
+.feature .glyph {
+  font-family: var(--serif); font-size: 34px; line-height: 1; color: var(--water); display: block; margin-bottom: 18px;
+}
+.feature h3 { font-family: var(--serif); font-weight: 400; font-size: 21px; margin: 0 0 6px; }
+.feature p { margin: 0; color: var(--ink-soft); font-size: 16px; line-height: 1.65; }
+
+/* Phones */
+.phones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin-top: 56px; align-items: start; }
+.phone { margin: 0; text-align: center; }
+.phone .frame {
+  border-radius: 38px; padding: 9px; background: #0b1012;
+  box-shadow: 0 30px 60px -30px rgba(10, 20, 24, 0.7), inset 0 0 0 1px #2a3338;
+  max-width: 280px; margin: 0 auto;
+}
+.phone .frame img { border-radius: 30px; width: 100%; }
+.phone:nth-child(2) { margin-top: 48px; }
+.phone figcaption { margin-top: 20px; font-family: var(--serif); font-size: 18px; }
+.phone figcaption span { display: block; font-family: var(--sans); font-size: 15px; color: var(--ink-soft); margin-top: 2px; }
+
+/* Pricing */
+.plans { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 760px; margin: 48px auto 0; }
+.plan {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px 30px;
+}
+.plan.plus { border-color: var(--water); }
+.plan h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; margin: 0; }
+.plan .price { font-family: var(--serif); font-size: 18px; color: var(--ink-soft); margin: 4px 0 18px; }
+.plan ul { margin: 0; padding: 0; list-style: none; }
+.plan li { padding: 9px 0; border-top: 1px solid var(--line); font-size: 16px; }
+
+/* Closing scene */
+.closing { text-align: center; padding: 110px 24px 0; }
+.closing p { font-family: var(--serif); font-size: clamp(22px, 4.4vw, 30px); margin: 0; letter-spacing: 0.04em; }
+.closing .muted { color: var(--moon); opacity: 0.6; font-size: 16px; font-family: var(--sans); margin-top: 10px; letter-spacing: 0.02em; }
+
+/* ---------- Legal and support pages ---------- */
+.banner { padding: 130px 24px 0; text-align: center; }
+.banner h1 {
+  font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 7vw, 52px);
+  letter-spacing: 0.06em; margin: 0;
+}
+.banner .kanji { font-family: var(--serif); letter-spacing: 0.5em; margin-right: -0.5em; opacity: 0.5; font-size: 15px; margin: 10px 0 0; }
+.banner .scene { margin-top: 26px; }
+
+.doc { padding: 56px 0 96px; }
+.doc .updated { color: var(--ink-soft); font-size: 14px; text-align: center; margin: 0 0 36px; letter-spacing: 0.04em; }
+.doc h2 { text-align: left; font-size: 25px; margin: 52px 0 10px; }
+.doc h2::before {
+  content: ""; display: block; width: 28px; height: 1px; background: var(--accent); margin-bottom: 18px;
+}
+.doc h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; margin: 30px 0 4px; }
+.doc ul { padding-left: 22px; }
+.doc li { margin: 6px 0; }
+.summary {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px 28px; margin: 0 0 12px;
+}
+.summary p { margin: 6px 0; }
+.summary strong { font-family: var(--serif); font-weight: 400; font-size: 19px; }
+
+details.faq { border-top: 1px solid var(--line); padding: 4px 0; }
+details.faq:last-of-type { border-bottom: 1px solid var(--line); }
+details.faq summary {
+  cursor: pointer; list-style: none; font-family: var(--serif); font-size: 19px; padding: 16px 32px 16px 0; position: relative;
+}
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary::after {
+  content: "+"; position: absolute; right: 4px; top: 13px; font-family: var(--sans); font-weight: 300; font-size: 24px; color: var(--ink-soft);
+  transition: transform 0.3s ease;
+}
+details.faq[open] summary::after { transform: rotate(45deg); }
+details.faq p { margin: 0 0 18px; color: var(--ink-soft); }
+
+/* Placeholders to fill in before publishing */
+.todo { background: var(--todo); padding: 0 4px; border-radius: 3px; }
+
+/* ---------- Footer ---------- */
+footer.site { background: #0b1215; color: #9aa7a7; padding: 36px 0 44px; text-align: center; }
+footer.site .brand { color: var(--moon); font-size: 17px; display: inline-block; margin-bottom: 10px; }
+footer.site p { margin: 4px 0; font-size: 14px; }
+footer.site a { color: #c2ccca; text-decoration: none; margin: 0 10px; }
+footer.site a:hover { color: #fff; }
+footer.site .fine { opacity: 0.6; font-size: 12px; margin-top: 14px; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 860px) {
+  .moods { grid-template-columns: repeat(3, 1fr); }
+  .features { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .wrap { padding: 0 16px; }
+  section.block { padding: 72px 0; }
+  nav a { margin-left: 16px; font-size: 12px; }
+  .brand { font-size: 17px; }
+  .features, .plans { grid-template-columns: 1fr; }
+  .phones { grid-template-columns: 1fr; gap: 44px; }
+  .phone:nth-child(2) { margin-top: 0; }
+  .phone .frame { max-width: 250px; }
+  .moods { gap: 10px; }
+}
+
+/* The scene keeps the torii large on narrow screens by cropping the sides */
+.hero .scene { height: clamp(240px, 38vw, 440px); }
+.banner .scene { height: clamp(120px, 20vw, 190px); }
+.closing .scene { height: clamp(200px, 30vw, 340px); margin-top: 40px; }
+@media (max-width: 640px) {
+  .pill { font-size: 12px; letter-spacing: 0.1em; padding: 10px 20px; white-space: nowrap; }
+}

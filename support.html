@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Support · Otonagi</title>
   <meta name="description" content="Help with Otonagi: purchases, sound, your data, and how to contact us.">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0b1215">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site">
     <div class="wrap">
-      <a class="brand" href="./">Otonagi <span>音凪</span></a>
+      <a class="brand" href="./">Otonagi<span lang="ja">音凪</span></a>
       <nav>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
@@ -20,9 +22,51 @@
     </div>
   </header>
 
-  <main>
-    <div class="wrap">
-      <h1>Support</h1>
+  <div class="night banner">
+    <h1>Support</h1>
+    <p class="kanji" lang="ja">助</p>
+    <svg class="scene" viewBox="250 110 700 180" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="bw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2a31"/><stop offset="1" stop-color="#0b1215"/>
+    </linearGradient>
+    <linearGradient id="bf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="bm"><rect x="0" y="220" width="1200" height="140" fill="url(#bf)"/></mask>
+  </defs>
+  <path d="M0 214 C 140 200 220 206 320 212 C 380 204 420 208 470 214 L 0 220 Z M 760 216 C 860 196 960 204 1040 210 C 1100 204 1160 206 1200 210 L 1200 220 L 760 220 Z" fill="#111b20"/>
+  <ellipse class="glow" cx="560" cy="210" rx="300" ry="40"/>
+  <rect x="0" y="220" width="1200" height="140" fill="url(#bw)"/>
+  <g id="bs" class="sil">
+    <path d="M436 136 Q 525 146 614 136 L 616 128 Q 525 138 434 128 Z"/>
+    <rect x="446" y="143" width="158" height="7"/>
+    <rect x="452" y="164" width="146" height="6"/>
+    <rect x="520" y="150" width="10" height="14"/>
+    <path d="M466 150 L 477 150 L 479 220 L 464 220 Z"/>
+    <path d="M573 150 L 584 150 L 586 220 L 571 220 Z"/>
+    <path d="M652 194 L 676 178 L 776 178 L 800 194 Z"/>
+    <rect x="668" y="194" width="116" height="26"/>
+    <rect x="640" y="218" width="172" height="3"/>
+    <rect x="380" y="219" width="420" height="2"/>
+  </g>
+  <g mask="url(#bm)">
+    <use href="#bs" class="refl" transform="translate(0 441) scale(1 -1)"/>
+  </g>
+  <g class="shimmer">
+    <line x1="430" y1="232" x2="620" y2="232"/><line x1="460" y1="244" x2="600" y2="244"/>
+    <line x1="660" y1="238" x2="800" y2="238"/><line x1="480" y1="258" x2="580" y2="258"/>
+    <line x1="690" y1="252" x2="770" y2="252"/>
+  </g>
+  <g class="ripples">
+    <ellipse cx="525" cy="290" rx="120" ry="12"/><ellipse cx="525" cy="290" rx="120" ry="12"/><ellipse cx="525" cy="290" rx="120" ry="12"/>
+  </g>
+</svg>
+  </div>
+
+  <main class="doc">
+    <div class="wrap narrow">
+      
 
       <div class="summary">
         <p>Something not right, or an idea to share? Write to us at <a class="todo" href="mailto:[SUPPORT EMAIL]">[SUPPORT EMAIL]</a>.</p>
@@ -31,29 +75,45 @@
 
       <h2>Common questions</h2>
 
-      <h3>I can't hear anything</h3>
-      <p>Check the volume and that your headphones or speaker are connected. Tap the mood name at the top to make sure the music isn't paused. If it still stays quiet, close Otonagi fully (swipe it away in the app switcher) and open it again.</p>
+      <details class="faq">
+        <summary>I can't hear anything</summary>
+        <p>Check the volume and that your headphones or speaker are connected. Tap the mood name at the top to make sure the music isn't paused. If it still stays quiet, close Otonagi fully (swipe it away in the app switcher) and open it again.</p>
+      </details>
 
-      <h3>How do I pause the music?</h3>
-      <p>Tap the name of the mood. Tap it again to carry on.</p>
+      <details class="faq">
+        <summary>How do I pause the music?</summary>
+        <p>Tap the name of the mood. Tap it again to carry on.</p>
+      </details>
 
-      <h3>I bought Otonagi Plus but it isn't unlocked</h3>
-      <p>Open <strong>Otonagi Plus</strong> from the menu in Otonagi and tap <strong>Restore purchases</strong>. Make sure you are signed in with the same Apple ID you used to buy it.</p>
+      <details class="faq">
+        <summary>I bought Otonagi Plus but it isn't unlocked</summary>
+        <p>Open <strong>Otonagi Plus</strong> from the menu in Otonagi and tap <strong>Restore purchases</strong>. Make sure you are signed in with the same Apple ID you used to buy it.</p>
+      </details>
 
-      <h3>How do I cancel my subscription?</h3>
-      <p>Open <strong>Settings › [your name] › Subscriptions</strong> on your iPhone, choose Otonagi and tap Cancel Subscription. Plus stays unlocked until the end of the year you paid for. Deleting the app does not cancel it.</p>
+      <details class="faq">
+        <summary>How do I cancel my subscription?</summary>
+        <p>Open <strong>Settings › [your name] › Subscriptions</strong> on your iPhone, choose Otonagi and tap Cancel Subscription. Plus stays unlocked until the end of the year you paid for. Deleting the app does not cancel it.</p>
+      </details>
 
-      <h3>Can I get a refund?</h3>
-      <p>Refunds are handled by Apple. Request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+      <details class="faq">
+        <summary>Can I get a refund?</summary>
+        <p>Refunds are handled by Apple. Request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+      </details>
 
-      <h3>Does Otonagi work offline?</h3>
-      <p>Yes. All music and sounds are made on your iPhone, so no connection is needed.</p>
+      <details class="faq">
+        <summary>Does Otonagi work offline?</summary>
+        <p>Yes. All music and sounds are made on your iPhone, so no connection is needed.</p>
+      </details>
 
-      <h3>Where is my check-in history kept?</h3>
-      <p>Only on your iPhone. We never see it. Deleting the app erases it, along with your name and settings. See the <a href="privacy.html">Privacy Policy</a> for more.</p>
+      <details class="faq">
+        <summary>Where is my check-in history kept?</summary>
+        <p>Only on your iPhone. We never see it. Deleting the app erases it, along with your name and settings. See the <a href="privacy.html">Privacy Policy</a> for more.</p>
+      </details>
 
-      <h3>Is Otonagi on iPad or Android?</h3>
-      <p>Otonagi is made for iPhone with iOS 17 or later.</p>
+      <details class="faq">
+        <summary>Is Otonagi on iPad or Android?</summary>
+        <p>Otonagi is made for iPhone with iOS 17 or later.</p>
+      </details>
 
       <!--
         EU trader details: if you declare yourself a trader in App Store Connect, Apple shows these on the
@@ -66,7 +126,9 @@
 
   <footer class="site">
     <div class="wrap">
-      <p>© 2026 <span class="todo">[LEGAL NAME]</span> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></p>
+      <a class="brand" href="./">Otonagi</a>
+      <p><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></p>
+      <p class="fine">© 2026 <span class="todo">[LEGAL NAME]</span>. iPhone is a trademark of Apple Inc. App Store is a service mark of Apple Inc.</p>
     </div>
   </footer>
 </body>
