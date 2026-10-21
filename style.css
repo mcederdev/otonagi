@@ -147,7 +147,7 @@ h2 {
 }
 .mood { margin: 0; text-align: center; }
 .mood img {
-  width: 100%; aspect-ratio: 325 / 477; object-fit: cover; border-radius: 16px;
+  width: 100%; height: auto; aspect-ratio: 325 / 477; object-fit: cover; border-radius: 16px;
   box-shadow: 0 18px 40px -22px rgba(10, 20, 24, 0.55);
 }
 .mood figcaption { margin-top: 12px; font-family: var(--serif); letter-spacing: 0.2em; font-size: 14px; }
@@ -175,7 +175,7 @@ h2 {
   box-shadow: 0 30px 60px -30px rgba(10, 20, 24, 0.7), inset 0 0 0 1px #2a3338;
   max-width: 280px; margin: 0 auto;
 }
-.phone .frame img { border-radius: 30px; width: 100%; }
+.phone .frame img { border-radius: 30px; width: 100%; height: auto; aspect-ratio: 600 / 1235; object-fit: cover; }
 .phone:nth-child(2) { margin-top: 48px; }
 .phone figcaption { margin-top: 20px; font-family: var(--serif); font-size: 18px; }
 .phone figcaption span { display: block; font-family: var(--sans); font-size: 15px; color: var(--ink-soft); margin-top: 2px; }
@@ -270,3 +270,7 @@ footer.site .fine { opacity: 0.6; font-size: 12px; margin-top: 14px; }
 @media (max-width: 640px) {
   .pill { font-size: 12px; letter-spacing: 0.1em; padding: 10px 20px; white-space: nowrap; }
 }
+
+/* Safari: keep grid items at their natural height so pictures are never stretched */
+.moods, .phones, .features, .plans { align-items: start; }
+.mood, .phone { align-self: start; min-width: 0; }
