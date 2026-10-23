@@ -8,7 +8,7 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#0b1215">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <header class="site">
@@ -82,16 +82,36 @@
       <div class="wrap">
         <p class="eyebrow">Moods</p>
         <h2>A place for every hour</h2>
-        <p class="lead">Each mood has its own instruments, pace and light. Swipe to drift from one to the next.</p>
+        <p class="lead">Each mood has its own instruments, pace and light. Swipe to drift from one to the next. Tap a card to turn it over.</p>
         <div class="moods">
-          <figure class="mood"><img src="images/mood-nagi.jpg" alt="Nagi mood: calm blue sea with soft wave lines" loading="lazy" width="325" height="477"></figure>
-          <figure class="mood"><img src="images/mood-ame.jpg" alt="Ame mood: grey green with raindrop ripples" loading="lazy" width="325" height="477"></figure>
-          <figure class="mood"><img src="images/mood-tera.jpg" alt="Tera mood: warm temple light" loading="lazy" width="325" height="477"></figure>
-          <figure class="mood"><img src="images/mood-mori.jpg" alt="Mori mood: forest green with falling leaves" loading="lazy" width="325" height="477"></figure>
-          <figure class="mood"><img src="images/mood-umi.jpg" alt="Umi mood: open ocean teal" loading="lazy" width="325" height="477"></figure>
-          <figure class="mood"><img src="images/mood-yuki.jpg" alt="Yuki mood: lilac sky with falling snow" loading="lazy" width="325" height="477"></figure>
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="face front"><img src="images/mood-nagi.jpg" alt="Nagi mood: calm blue sea with soft wave lines" loading="lazy" width="325" height="477"></span>
+            <span class="face back"><span class="k" lang="ja">凪</span><span class="n">Nagi</span><span class="m">calm sea</span><span class="d">The hush when the wind drops and the sea lies still. Koto over slow, soft waves.</span><span class="tag">Free</span></span>
+          </button>
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="face front"><img src="images/mood-ame.jpg" alt="Ame mood: grey green with raindrop ripples" loading="lazy" width="325" height="477"></span>
+            <span class="face back"><span class="k" lang="ja">雨</span><span class="n">Ame</span><span class="m">rain</span><span class="d">Rain on still water with soft piano. For reading, resting or drifting off.</span><span class="tag">Free</span></span>
+          </button>
+          <button class="flip more" type="button" aria-pressed="false">
+            <span class="face front"><img src="images/mood-tera.jpg" alt="" loading="lazy" width="325" height="477"><span class="plus"><span class="big">+5</span><span>more moods</span></span></span>
+            <span class="face back"><span class="n">Five more</span>
+              <span class="list"><span><b>Tera</b>, temple light with a bell and the mokugyo</span><span><b>Mori</b>, a forest with the bamboo knock of a shishi-odoshi</span><span><b>Umi</b>, deep ocean swells with a soft taiko heartbeat</span><span><b>Yuki</b>, falling snow and glass wind chimes</span><span><b>Takibi</b>, a crackling fire for long evenings</span></span>
+              <span class="tag">Plus</span></span>
+          </button>
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="face front"><img src="images/mood-kumo.jpg" alt="Kumo mood: a tai chi master in silhouette on a jetty, a torii on the far shore" loading="lazy" width="325" height="477"></span>
+            <span class="face back"><span class="k" lang="ja">雲</span><span class="n">Kumo</span><span class="m">cloud</span><span class="d">A tai chi master in silhouette by still water, with shakuhachi. Ugoki invites you to move freely, slow and soft, while a clock counts the time.</span><span class="tag">Plus</span></span>
+          </button>
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="face front"><img src="images/mood-nobi.jpg" alt="Nobi mood: a man sitting cross-legged in a sunlit dojo" loading="lazy" width="325" height="477"></span>
+            <span class="face back"><span class="k" lang="ja">伸</span><span class="n">Nobi</span><span class="m">stretch</span><span class="d">A man sits in a sunlit dojo, to a handpan in the Akebono scale. Hogushi gives a calm rhythm of 30-second holds for your own stretches.</span><span class="tag">Plus</span></span>
+          </button>
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="face front"><img src="images/mood-hinode.jpg" alt="Hinode mood: sunrise over a hillside with a cherry tree and Mount Fuji" loading="lazy" width="325" height="477"></span>
+            <span class="face back"><span class="k" lang="ja">日の出</span><span class="n">Hinode</span><span class="m">sunrise</span><span class="d">Dawn on a hillside with a cherry tree, Fuji and a stone lantern, to koto, the shō and birdsong. Himukae is a sun salutation in twelve kata.</span><span class="tag">Plus</span></span>
+          </button>
         </div>
-        <p class="moods-note">And Takibi, a crackling fire for long evenings, Kumo, a tai chi master in silhouette by still water, Nobi, a sunlit dojo with a handpan, and Hinode, sunrise over a hillside with cherry blossom and the shō. Ten moods in all.</p>
+        <p class="moods-note">Ten moods in all. Nagi and Ame are free.</p>
       </div>
     </section>
 
@@ -207,5 +227,12 @@
       <p class="fine">© 2026 Magnus Cederberg. iPhone is a trademark of Apple Inc. App Store is a service mark of Apple Inc.</p>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll('.flip').forEach(function (c) {
+      c.addEventListener('click', function () {
+        c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+      });
+    });
+  </script>
 </body>
 </html>

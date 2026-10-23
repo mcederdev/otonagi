@@ -15,7 +15,7 @@ The site lives in the **otonagi** repository on the **mcederdev** account and is
 2. Settings › Pages should be "Deploy from a branch", branch `main`, folder `/ (root)`.
 3. Changes go live after about a minute.
 
-When you change `style.css`, raise the number in `style.css?v=5` in all four HTML files (to `v=6` and so on) and upload them too, so browsers fetch the new stylesheet instead of a cached one.
+When you change `style.css`, raise the number in `style.css?v=6` in all four HTML files (to `v=7` and so on) and upload them too, so browsers fetch the new stylesheet instead of a cached one.
 
 All links in the pages are relative, so they work under the `/otonagi/` subpath. GitHub Pages serves `privacy.html` at `/otonagi/privacy` too.
 
