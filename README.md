@@ -2,25 +2,20 @@
 
 The Otonagi website: home, Privacy Policy, Terms of Use and Support. Plain HTML and CSS, no build step, no trackers.
 
-## Before publishing
+## Details on the pages
 
-Search the files for `[` and replace every placeholder (they are highlighted yellow on the pages):
-
-- `[SUPPORT EMAIL]`: the address users write to (in privacy, terms, support)
-- `[LEGAL NAME]`: your name or company name
-- `[COUNTRY]`: where you or your company are based (also sets the law in the terms)
-- `[DATE OF PUBLISHING]`: in privacy and terms
-- EU trader details: optional block, commented out at the bottom of `support.html`
-
-Then remove the `todo` class from the filled-in spots (or leave it and delete the `.todo` rule in `style.css`).
+- Support email: mcederdev@gmail.com. Maker: Magnus Cederberg, Sweden (the terms follow Swedish law).
+- EU trader: Magnus chose "not a trader" (hobby), so no address or phone is shown.
 
 ## Publish on GitHub Pages
 
 The site lives in the **otonagi** repository on the **mcederdev** account and is served at https://mcederdev.github.io/otonagi/.
 
-1. Open the repository on GitHub and choose Add file › Upload files. Drag in `index.html`, `privacy.html`, `terms.html`, `support.html`, `style.css`, `favicon.svg` and the whole `images` folder (it keeps its name). Commit.
+1. Commit changes to `main` (Claude pushes updates directly; uploading through Add file › Upload files also works).
 2. Settings › Pages should be "Deploy from a branch", branch `main`, folder `/ (root)`.
 3. Changes go live after about a minute.
+
+When you change `style.css`, raise the number in `style.css?v=5` in all four HTML files (to `v=6` and so on) and upload them too, so browsers fetch the new stylesheet instead of a cached one.
 
 All links in the pages are relative, so they work under the `/otonagi/` subpath. GitHub Pages serves `privacy.html` at `/otonagi/privacy` too.
 
